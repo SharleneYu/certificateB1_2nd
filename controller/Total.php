@@ -8,8 +8,15 @@ class Total extends DB{
         parent::__construct('total');
     }
 
-    
-
+    function backend(){
+        $view=[
+            'header'=>'進站總人數管理',
+            'table'=>$this->table,
+            'rows'=>$this->all(),
+                   
+        ];
+        return $this->view('./view/backend/total.php', $view);
+    }
 
 }
 

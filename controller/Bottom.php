@@ -8,7 +8,14 @@ class Bottom extends DB{
         parent::__construct('bottom');
     }
 
-    
+    function backend(){
+        $view=[
+            'header'=>'頁尾版權資料管理',
+            'table'=>$this->table,
+            'rows'=>$this->all()       
+        ];
+        return $this->view('./view/backend/bottom.php', $view);
+    }
 
 
 }

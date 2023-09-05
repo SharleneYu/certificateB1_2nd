@@ -108,7 +108,7 @@ class DB{
 
 
     //for views
-    function view($url, $date=[]){
+    function view($url, $data=[]){
         extract($data);
         include($url);
     }
