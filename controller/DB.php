@@ -53,10 +53,7 @@ class DB{
 
 
     //CRUD
-    function q($sql){
-        return $this->pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
-    }
-
+  
     function all(...$arg){
         $sql= " SELECT * FROM $this->table ";
         $sql= $this->sql_all($sql, ...$arg);
