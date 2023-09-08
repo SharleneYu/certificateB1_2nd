@@ -14,7 +14,10 @@ class Image extends DB{
             'table'=>$this->table,
             'rows'=>$this->all(),
             'addBtn'=>'新增校映象圖片',
-            'modal'=>"./view/modal/image.php"          
+            'modal'=>"./view/modal/image.php",  
+            'updateModal'=>"./view/modal/updateimage.php",
+            'updateBtn'=>"更新圖片"      
+        
         ];
         return $this->view('./view/backend/image.php', $view);
     }
