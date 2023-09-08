@@ -12,7 +12,8 @@ class News extends DB{
         $view=[
             'header'=>'最新消息資料管理',
             'table'=>$this->table,
-            'rows'=>$this->all(),
+            'rows'=>$this->paginate(4),
+            'links'=>$this->links(),
             'addBtn'=>'新增最新消息資料',
             'modal'=>"./view/modal/news.php"          
         ];

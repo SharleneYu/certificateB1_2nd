@@ -12,7 +12,8 @@ class Image extends DB{
         $view=[
             'header'=>'校園映像資料管理',
             'table'=>$this->table,
-            'rows'=>$this->all(),
+            'rows'=>$this->paginate(3),
+            'links'=>$this->links(),
             'addBtn'=>'新增校映象圖片',
             'modal'=>"./view/modal/image.php",  
             'updateModal'=>"./view/modal/updateimage.php",
