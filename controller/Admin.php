@@ -10,13 +10,13 @@ class Admin extends DB{
 
     function backend(){
         $view=[
-            'header'=>'動態文字廣告管理',
+            'header'=>'管理者帳號管理',
             'table'=>$this->table,
             'rows'=>$this->all(),
-            'addBtn'=>'新增動態文字廣告',
-            'modal'=>"./view/modal/ad.php"          
+            'addBtn'=>'新增管理者帳號',
+            'modal'=>"./view/modal/admin.php"          
         ];
-        return $this->view('./view/backend/ad.php', $view);
+        return $this->view('./view/backend/admin.php', $view);
     }
 
 
