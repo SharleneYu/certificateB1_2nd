@@ -12,11 +12,15 @@ class Total extends DB{
         $view=[
             'header'=>'進站總人數管理',
             'table'=>$this->table,
-            'rows'=>$this->all(),
-                   
+            'total'=>$this->find(1)['total']       
         ];
         return $this->view('./view/backend/total.php', $view);
     }
+
+    function show(){
+        return $this->find(1)['total'];
+    }
+
 
 }
 

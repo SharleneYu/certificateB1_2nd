@@ -12,10 +12,22 @@ class Bottom extends DB{
         $view=[
             'header'=>'頁尾版權資料管理',
             'table'=>$this->table,
-            'rows'=>$this->all()       
+            'bottom'=>$this->find(1)['bottom']       
         ];
         return $this->view('./view/backend/bottom.php', $view);
     }
+
+    function show(){
+        return $this->find(1)['bottom'];
+    }
+
+
+  
+        
+                
+                
+              
+       
 
 
 }
