@@ -46,9 +46,8 @@ foreach($rows as $id=>$row){
                 // 若有text，是ad或menu；若無text，是mvim或image
                 if(isset($_POST['text'])){
                     $data['text']=$row;
-                }else{
-                    $data['sh']=(isset($_POST['sh']) && in_array($id, $_POST['sh'])?1:0);
                 }
+                    $data['sh']=(isset($_POST['sh']) && in_array($id, $_POST['sh'])?1:0);
         }
         $$db->save($data);
     }

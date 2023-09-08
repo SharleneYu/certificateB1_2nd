@@ -19,6 +19,10 @@ class Ad extends DB{
         return $this->view('./view/backend/ad.php', $view);
     }
 
-
+    function show(){
+        $rows=$this->all(['sh'=>1]);
+        $marquee=join(" &nbsp; &nbsp;", array_column($rows, 'text'));
+        return $marquee;
+    }
 }
 
