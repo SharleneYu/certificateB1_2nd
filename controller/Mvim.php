@@ -14,9 +14,18 @@ class Mvim extends DB{
             'table'=>$this->table,
             'rows'=>$this->all(),
             'addBtn'=>'新增動畫圖片',
-            'modal'=>"./view/modal/mvim.php"          
+            'modal'=>"./view/modal/mvim.php",
+            'updateModal'=>"./view/modal/updateMvim.php",
+            'updateBtn'=>"更新動畫"      
+          
         ];
         return $this->view('./view/backend/mvim.php', $view);
+    }
+
+    function show(){
+        $rows=$this->all(['sh'=>1]);
+     
+        
     }
 
 
