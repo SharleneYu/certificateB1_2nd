@@ -98,16 +98,27 @@
 				<button style="width:100%; margin-left:auto; margin-right:auto; margin-top:2px; height:50px;" onclick="lo(&#39;?do=admin&#39;)">管理登入</button>
 				<div style="width:89%; height:480px;" class="dbor">
 					<span class="t botli">校園映象區</span>
+					<div class="cent" style="margin-top: 10px">
+						<img src="./icon/up.jpg" onclick="pp(1)">
+					</div>
+					<div class="cent">
+					<?php
+						$Image->show();
+					?>
+					</div>
+					<div class="cent" style="margin-top: 5px">
+						<img src="./icon/dn.jpg" onclick="pp(2)">
+					</div>
 					<script>
 						var nowpage = 0,
-							num = 0;
+							num = <?=$Image->count();?>;
 
 						function pp(x) {
 							var s, t;
 							if (x == 1 && nowpage - 1 >= 0) {
 								nowpage--;
 							}
-							if (x == 2 && (nowpage + 1) * 3 <= num * 1 + 3) {
+							if (x == 2 && nowpage  <= (num - 3)) {
 								nowpage++;
 							}
 							$(".im").hide()

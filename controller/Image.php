@@ -23,6 +23,16 @@ class Image extends DB{
         return $this->view('./view/backend/image.php', $view);
     }
 
+    function show(){
+        $rows= $this->all(['sh'=>1]);
+        foreach($rows as $idx=>$row){
+            ?>
+                <div class="im" id="ssaa<?=$idx;?>">
+                    <img src="./upload/<?=$row['img'];?>" style="margin-top:5px; width:150px; height:103px; border:3px solid orange;" >
+                </div>
+            <?php
+        }
+    }
 
 }
 
