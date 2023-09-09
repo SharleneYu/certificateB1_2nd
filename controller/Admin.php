@@ -19,6 +19,20 @@ class Admin extends DB{
         return $this->view('./view/backend/admin.php', $view);
     }
 
+    // 當有登入請求時，檢查傳過來的$user
+    function login($user){
+        // 有$user再執行
+        if(!empty($user)){
+            $chk=$this->count($user);
+            if($chk){
+                to("backend.php");
+            }else{
+                ?>
+                <script>alert("帳號或密碼輸入錯誤")</script>
+                <?php
+            }
+        }
+    }
 
 }
 
