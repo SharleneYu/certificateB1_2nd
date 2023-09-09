@@ -45,7 +45,7 @@
             <tbody>
                 <tr>
                     <input type="hidden" name="table" value='<?=$table?>'>
-                    <td width="200px"><input type="button" onclick="op('#cover','#cvr','<?=$modal;?>')" value="<?=$addBtn;?>"></td>
+                    <td width="200px"><input type="button" onclick="op('#cover','#cvr','<?=$modal;?>?id=<?=$row['id'];?>')" value="<?=$addBtn;?>"></td>
                     <td class="cent"><input type="submit" value="修改確定"><input type="reset" value="重置"></td>
                 </tr>
             </tbody>
