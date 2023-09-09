@@ -10,7 +10,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 	<title>卓越科技大學校園資訊系統</title>
-	<link href="./css/style.css" rel="stylesheet" type="text/css">
+	<link href="./css/css.css" rel="stylesheet" type="text/css">
 	<script src="./js/jquery-1.9.1.min.js"></script>
 	<script src="./js/js.js"></script>
 </head>
@@ -36,16 +36,16 @@
 					<?php
 						$rows=$Menu->show();
 						foreach($rows as $row){
-							echo '<div class="mainmu" >';
+							echo "<div class='mainmu' >";
 							echo "<a href='{$row['href']}'>";
 							echo $row['text'];
 							echo "</a>";
 
 							// 判斷有無次選單
 							if(isset($row['subs'])){
-								echo '<div class="mw" >';
+								echo "<div class='subMenu' >";
 								foreach($row['subs'] as $sub){
-									echo '<div class="mainmu2" >';
+									echo "<div class='mainmu2' >";
 									echo "<a href='{$sub['href']}'>";
 									echo $sub['text'];
 									echo "</a>";

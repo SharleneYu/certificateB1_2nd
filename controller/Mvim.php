@@ -24,7 +24,11 @@ class Mvim extends DB{
 
     function show(){
         $rows=$this->all(['sh'=>1]);
-     
+        foreach($rows as $row){
+        ?>
+            lin.push("./upload/<?=$row['img'];?>")
+        <?php
+        }
         
     }
 

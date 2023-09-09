@@ -30,6 +30,17 @@ class Menu extends DB{
         return $this->view('./view/backend/menu.php', $view);
     }
 
+    // [??SYU??] 將資料塞進陣列的做法不懂。塞入的資料能不能少一層
+    function show(){
+        // 先取得主選單資料存在$rows
+        $rows=$this->all(['main_id'=>0]);
+        foreach($rows as $idx=>$row){
+            // 再依每個主選單，找出其次選單，塞進陣列
+            $row['subs']=$this->all(['main_id'=>$row['id']]);
+            $rows[$idx]=$row;
+        }
+        return $rows;
+    }
 
 }
 
