@@ -142,7 +142,7 @@ class DB{
             $html.="<a href='?do=$this->table&p=$prev'>&lt;</a>";
         }
 
-        for($i=1; $i<$this->links['pages'];$i++){
+        for($i=1; $i<=$this->links['pages'];$i++){
             $size=($this->links['now']==$i)?'24px':'18px';
             $html.="<a href='?do=$this->table&p=$i' style='font-size:$size'>$i</a>";
         }
@@ -153,6 +153,9 @@ class DB{
         }
         return $html;
     }
+
+    
+    
 
     
 
